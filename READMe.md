@@ -60,9 +60,9 @@ Insert this HTML line at the very bottom of your email source code (Roundcube, O
 
 ```html
 <img src="https://YOUR_AWS_URL_HERE?id=Job_Application_Google&r=999" width="1" height="1" style="display:none !important;" />
+```
 
-
-Parameters explained:
+##Parameters explained:
 id=...: The unique name for this email (so you know which one was opened).
 
 r=...: A random number (e.g., 123, 999) to force the browser to reload the image.
@@ -75,14 +75,12 @@ If you often check your sent folder from a specific location (like a university 
 
 In lambda_function.py, find the Blocking Logic section and uncomment this lines:
 
-Python
-
+```python
 # if ip_address.startswith('139.179'):  # Example: Bilkent University IP
 #     return return_pixel()
 Changing Cooldown Time
 Currently set to 300 seconds (5 minutes). To change this, modify the line:
-
-Python
+```
 
 if difference < 300: 
 🤖 Credits
