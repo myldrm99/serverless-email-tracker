@@ -63,17 +63,18 @@ Insert this HTML line at the very bottom of your email source code (Roundcube, O
 ```
 
 ## Parameters explained:
-### id=...: The unique name for this email (so you know which one was opened).
+id=...: The unique name for this email (so you know which one was opened).
 
-### r=...: A random number (e.g., 123, 999) to force the browser to reload the image.
+r=...: A random number (e.g., 123, 999) to force the browser to reload the image.
 
-### test=true: Add this to the end (&test=true) if you are opening it yourself and don't want it counted.
+test=true: Add this to the end (&test=true) if you are opening it yourself and don't want it counted.
 
 ## ⚙️ Advanced Customization
-### Blocking Your School/Work IP
-### If you often check your sent folder from a specific location (like a university campus), you can block that IP range so you don't trigger false positives.
 
-### In lambda_function.py, find the Blocking Logic section and uncomment this lines:
+### Blocking Your School/Work IP
+If you often check your sent folder from a specific location (like a university campus), you can block that IP range so you don't trigger false positives.
+
+In lambda_function.py, find the Blocking Logic section and uncomment this lines:
 
 ```python
 # if ip_address.startswith('139.179'):  # Example: Bilkent University IP
@@ -81,7 +82,7 @@ Insert this HTML line at the very bottom of your email source code (Roundcube, O
 Changing Cooldown Time
 Currently set to 300 seconds (5 minutes). To change this, modify the line:
 ```
-
 ### if difference < 300: 
+
 ## 🤖 Credits
-### All codes and documentation in this repository were written by Google Gemini.
+All codes and documentation in this repository were written by Google Gemini.
